@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-  def index; end
+  before_action :find_post_by_id, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @posts = Post.all.order('created_at DESC')
+  end
 
   def new
     @post = Post.new
@@ -16,6 +20,8 @@ class PostsController < ApplicationController
     end
   end
 
+  def show; end
+
   def edit; end
 
   def update
@@ -26,9 +32,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy; end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :description)
+  end
+
+  def find_post_by_id
+    @post = Post.find(params[:id])
   end
 end
