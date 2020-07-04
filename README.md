@@ -1,24 +1,17 @@
-# README
+# Sport Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+July 2020
 
-Things you may want to cover:
+## It use:
 
-* Ruby version
+* Ruby 2.6.3
 
-* System dependencies
+* Ruby on Rails '6.0.3'
 
-* Configuration
+* SQLite3 '1.4'
 
-* Database creation
+* simple_form '5.0.2'
 
-* Database initialization
+* Bootstrap-sass '3.4.1'
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Devise '4.7.2'
