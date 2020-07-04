@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_post
-  before_action :find_comment, exclude: [:create]
+  before_action :find_comment, except: [:create]
 
   def create
     @comment = @post.comments.create(comment_params)
